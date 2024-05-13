@@ -1,3 +1,3 @@
 # first-repostitory
-# git config
+## git config
 add new contents
