@@ -1,5 +1,5 @@
-def flip(string):
-    flipString = string[::-1]
+def flip(string): # 회문 판별 함수
+    flipString = string[::-1] # 문자열을 역순으로 만들어주는 [::-1]
     print('출력 값 : ', flipString)
     if string == flipString:
         print('회문입니다.')
@@ -8,11 +8,11 @@ def flip(string):
 
 string = []
 
-string = input('회문을 입력해 주세요: ')
+string = input('회문을 입력해 주세요: ') # 입력 값 받기
 
 print('입력 값 : ', string)
 
-flip(string)
+flip(string) # 받은 입력 값을 회문 판별 함수에 넣는다
 
 ==========================================================================================================================================
 [회고]
