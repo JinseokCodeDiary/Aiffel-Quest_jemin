@@ -1,0 +1,18 @@
+def flip(string):
+    flipString = []
+    flipString = string[::-1]
+    return flipString
+
+string = []
+
+string = input('회문을 입력해 주세요: ')
+
+print('입력 값 : ', string)
+
+flipString = flip(string)
+
+print('출력 값 : ', flipString)
+if string == flipString:
+    print('회문입니다.')
+else:
+    print('회문이 아닙니다.')
