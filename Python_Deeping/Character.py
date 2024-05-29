@@ -57,12 +57,16 @@ class Player(Charater):
 
         self.exp += gainExp
 
-        if self.exp >= 50: # 경험치가 50 이상이라면
-            self.level_up() # 레벨업을 하고
-            if self.exp - 50 != 0: # 남은 경험치를 더해주는 조건
-                self.exp -= 50
+        while True:
+            if self.exp >= 50: # 경험치가 50 이상이라면
+                self.level_up() # 레벨업을 하고
+                print('레벨이 올랐습니다!')
+                if self.exp - 50 != 0: # 남은 경험치를 더해주는 조건
+                    self.exp -= 50
+                else:
+                    self.exp = 0
             else:
-                self.exp = 0
+                break
 
     def level_up(self):
         self.level += 1
@@ -80,10 +84,10 @@ class Monster(Charater):
 
     def __init__(self, name, level):
 
-        self.hp = randint(1, 4) * level
-        self.attack = randint(1, 4) * level
-        self.defense = randint(1, 4) * level
-        self.exp = 30 * level
+        self.hp = randint(1, 3) * level
+        self.attack = randint(1, 3) * level
+        self.defense = randint(1, 3) * level
+        self.exp = 6 * level
         super().__init__(name, level, self.hp, self.attack, self.defense)
 
     def __str__(self):
