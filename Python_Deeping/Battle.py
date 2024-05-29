@@ -76,7 +76,14 @@ def battle(player,monster):
         return
 
 def stage(player, stage_number):
-    monsterdic = {'monstername' : '고블린', 'level' : 2}
+    # monsterdic = {'monstername' : '고블린', 'level' : 3}
+    if stage_number == 1: 
+      monsterdic = {'monstername': '고블린', 'level': 5} 
+    elif stage_number == 2: 
+      monsterdic = {'monstername': '오크', 'level': 10} 
+    elif stage_number == 3:
+      monsterdic = {'monstername': '오우거', 'level': 15}
+
     monster_list = list(gen_monster(monsterdic)) # 몬스터 list 생성
     print(f"{stage_number}번째 스테이지 시작")
     print("{0}마리의 {1}을 마주쳤습니다!".format(len(monster_list), monsterdic["monstername"]))
