@@ -23,11 +23,11 @@ class PomodoroTimer {
       else { // 설정된 시간이 끝났다면
         if (isWorking) { // 현재 업무 시간이였다면
           cycleCount++; // 회차를 더하고
-          print('업무 시간 종료. 휴식 시작');
+          print('$cycleCount 회차 업무 시간 종료. 휴식 시작');
           currentTime = cycleCount % 4 == 0 ? longRest : shortRest; // 4회차라면 15분 휴식 아니라면 5분 휴식
         }
         else{ // 현재 휴식 시간이였다면
-          print('휴식 시간 종료. 업무 시작');
+          print('휴식 시간 종료. ${cycleCount+1} 회차 업무 시작');
           currentTime = workTime; // 25분을 부여
         }
         isWorking = !isWorking; // 업무 또는 휴식 시간 변경
@@ -41,3 +41,5 @@ class PomodoroTimer {
   }
 
 }
+//회고
+유제민 : 머리속에서 어떻게 짤지 고민하는데 시간이 엄청 들었다....막상 짜고나니 간단하게 만들어졌는데 어떻게 짜야 좀 더 좋을지 유연한 생각이 필요하다 느꼈다.
