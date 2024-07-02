@@ -6,9 +6,9 @@ void main() {
 }
 
 class PomodoroTimer {
-  static const int workTime = 25 * 60; // 25 분 업무 시간
-  static const int shortRest = 5 * 60; // 5 분 4회차를 제외한 휴식 시간
-  static const int longRest = 15 * 60; // 15 분 4회차 휴식 시간
+  static const int workTime = 5; // 25 분 업무 시간 / 동작을 보기 위해 시간 단축
+  static const int shortRest = 5; // 5 분 4회차를 제외한 휴식 시간 / 동작을 보기 위해 시간 단축
+  static const int longRest = 10; // 15 분 4회차 휴식 시간 / 동작을 보기 위해 시간 단축
   int currentTime = workTime; // currentTime은 실시간으로 줄어들면서 타이머 역할을 함
   Timer? timer; // null 값이 들어갈 수 있도록 ? 추가
   bool isWorking = true; // 현재 휴식 시간인지 업무 시간인지 체크 true 업무, false 휴식
