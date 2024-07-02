@@ -35,6 +35,8 @@ class PomodoroTimer {
     });
   }
 
+  // 처음에 workTime이나 Rest를 초 단위로 만들어 놔서 1500초...300초 이렇게 나왔다.
+  // 이를 바꾸기 위해 format 작성
   String format(int seconds){ // 초 단위를 분 단위로 변환
     var duration = Duration(seconds: seconds);
     return duration.toString().split('.').first.substring(2, 7);
