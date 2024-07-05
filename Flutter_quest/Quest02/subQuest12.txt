@@ -1,0 +1,96 @@
+// 회고 : flutter로 앱 화면 구현해 볼 수 있어서 재밌었다.
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: Icon(Icons.menu),    // appbar 좌측 상단에 아이콘 추가
+        title: Text('플러터 앱 만들기', textAlign: TextAlign.center), // appbar 중앙에 텍스트 추가
+        backgroundColor: Colors.blue,  // appbar 색상 blue 지정
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            ElevatedButton(              // button 추가
+              onPressed: () {
+                print('버튼이 눌렸습니다'); // 버튼 클릭 시 콘솔 출력
+              },
+              child: Text('Text'),       // Text 표기
+            ),
+            SizedBox(height: 20), // 버튼과 컨테이너 사이의 간격 추가
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 50), // 좌우에 여백 삽입
+              // retry : 중앙에 컨테이너를 위치시키기 위해 center를 사용했지만, topLeft로 정렬된 채로 중앙에 위치시키기 위해 여백을 삽입함.
+              child: Stack(
+                children: <Widget>[
+                  // 첫 번째 정사각형 컨테이너
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Container(
+                      width: 300,
+                      height: 300,
+                      color: Colors.red, // 빨간색
+                    ),
+                  ),
+                  // 두 번째 정사각형 컨테이너
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Container(
+                      width: 240,
+                      height: 240,
+                      color: Colors.orange, // 주황색
+                    ),
+                  ),
+                  // 세 번째 정사각형 컨테이너
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Container(
+                      width: 180,
+                      height: 180,
+                      color: Colors.yellow, // 노란색
+                    ),
+                  ),
+                  // 네 번째 정사각형 컨테이너
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Container(
+                      width: 120,
+                      height: 120,
+                      color: Colors.green, // 초록색
+                    ),
+                  ),
+                  // 다섯 번째 정사각형 컨테이너
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Container(
+                      width: 60,
+                      height: 60,
+                      color: Colors.blue, // 파란색
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
