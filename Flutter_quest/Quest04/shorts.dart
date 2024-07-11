@@ -38,9 +38,9 @@ class Shorts extends StatelessWidget {
                              //   MaterialPageRoute(builder: (context) => Home()),
                              // );
                             // home으로 이동이 안된다...왜지?
-                            Navigator.pushNamed(context, '/home');
+                            Navigator.pushNamed(context, '/home'); // 홈 페이지로 이동 
                           },
-                          child: Container(
+                          child: Container(// 컨테이너 크기를 지정하고, 그 크기 내에 이미지를 맞춰서 출력
                             width: 48,
                             height: 48,
                             clipBehavior: Clip.antiAlias,
@@ -85,13 +85,14 @@ class Shorts extends StatelessWidget {
                         top: 0,
                         child: InkWell(
                           onTap: () {
+                            // home 화면으로 이동이 안되서 push가 아닌 pushNamed로 변경해 봄
                             // Navigator.push(
                             //   context,
                             //   MaterialPageRoute(builder: (context) => Subscribe()),
                             // );
-                            Navigator.pushNamed(context, '/subscribe');
+                            Navigator.pushNamed(context, '/subscribe'); // 구독 페이지로 이동
                           },
-                          child: Container(
+                          child: Container( // 컨테이너 크기를 지정하고, 그 크기 내에 이미지를 맞춰서 출력
                             width: 48,
                             height: 48,
                             clipBehavior: Clip.antiAlias,
