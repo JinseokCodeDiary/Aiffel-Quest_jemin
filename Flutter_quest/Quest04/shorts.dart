@@ -32,6 +32,7 @@ class Shorts extends StatelessWidget {
                         top: 1,
                         child: InkWell(
                           onTap: (){
+                            // home 화면으로 이동이 안되서 push가 아닌 pushNamed로 변경해 봄
                              // Navigator.push(
                              //   context,
                              //   MaterialPageRoute(builder: (context) => Home()),
