@@ -93,11 +93,12 @@ class JellyfishState extends State<JellyfishPage> {
       if (response.statusCode == 200) { // 통신이 원활하다면
         final data = jsonDecode(response.body);
         setState(() {
-          if (dataType == "predicted_label") { // 예측결과 값
-            result = "predicted_label: ${data['predicted_label']}";
-          } else if (dataType == "prediction_score") { // 예측확률 값
-            result = "prediction_score: ${data['prediction_score']}";
-          }
+          // if (dataType == "predicted_label") { // 예측결과 값
+          //   result = "predicted_label: ${data['predicted_label']}";
+          // } else if (dataType == "prediction_score") { // 예측확률 값
+          //   result = "prediction_score: ${data['prediction_score']}";
+          // }
+          result = '$dataType: ${data[dataType]}'; // 선웅님께서 알려주신 코드
         });
       } else { // 통신이 원활하지 않는다면
         setState(() {
