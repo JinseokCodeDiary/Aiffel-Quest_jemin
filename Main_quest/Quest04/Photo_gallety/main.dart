@@ -99,7 +99,7 @@
 //             IconButton(icon: Icon(Icons.search), onPressed: () {
 //               showSearch(
 //                 context: context,
-//                 delegate: PhotoSearch(dummyPhotos),  // PhotoSearch가 dummyPhotos를 받는 것이 맞는지 확인하세요.
+//                 delegate: PhotoSearch(dummyPhotos),
 //               );
 //             },),
 //           ],
